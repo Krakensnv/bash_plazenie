@@ -1,5 +1,5 @@
 # Vitaj v bash plazení!
-![terminal](https://https://github.com/Krakensnv/bash_plazenie/blob/main/images/terminal.png)
+![terminal](https://github.com/Krakensnv/bash_plazenie/blob/main/images/terminal.png)
 - **(Bash - tlmočník príkazového jazyka)**
 - **(plazenie - zrejme to pojde pomaly :-))**
 
