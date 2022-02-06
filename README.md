@@ -1,7 +1,7 @@
 # Vitaj v bash plazení!
-
-(Bash - tlmočník príkazového jazyka)
-(plazenie - zrejme to pojde pomaly :-)
+![terminal](https://https://github.com/Krakensnv/bash_plazenie/blob/main/images/terminal.png)
+- **(Bash - tlmočník príkazového jazyka)**
+- **(plazenie - zrejme to pojde pomaly :-))**
 
 ## Toto je hra, ktorá ťa naučí základy používania terminálu POSIX (Linux, BSD, UNIX).
 
@@ -26,14 +26,14 @@ $ cd /home/tvoje_meno/Downloads/bash_plazenie/vstup
 V okne terminálu stlač RETURN.
 Presná cesta k vstupu sa líši v závislosti od toho, kde si súbor uložil.
 
-**Tvoj prvý krok je veľmi dôležitý. Vo zvitkoch vždy nájdeš potrebné informácie ako postupovať ďalej.**
-Zadaj toto do svojho terminálu:
+### **Tvoj prvý krok je veľmi dôležitý. Vo zvitkoch vždy nájdeš potrebné informácie ako postupovať ďalej.**
 
+- Zadaj toto do svojho terminálu:
 ```
 cat zvitok
 ```
 
-## Teraz hráš hru.
+### Teraz hráš hru.
 Nech ťa bohovia zachránia :-)
 
 ## POZNÁMKY PRE macOS X
