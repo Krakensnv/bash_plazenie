@@ -1,0 +1,334 @@
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+if [[ -e orb1 && -e orb2 && -e orb3 ]]; then
+    cat << EOF
+Oslobodil si hmotnú formu pohára. Pridaj „pohár“ do
+tvojho inventára.
+
+EOF
+    exit
+else 
+    cat << EOF
+Pokúšaš sa chytiť slabo žiariaci pohár, ale prejde ti
+cez prsty.
+
+EOF
+
+fi
+
+printf "Zaseklol si sa? Potrebuješ nápovedu? a/n "
+read RESP
+
+if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+    cat << EOF
+Skús na opensource.com vyhľadať rady, ako kopírovať súbory.
+
+EOF
+    printf "Stále zaseknutý? Potrebuješ odpoveď? a/n  "
+    read RESP
+
+    if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+        cat << EOF
+Príkaz cp skopíruje jeden súbor do druhého. Spusti tieto
+príkazy:
+
+cp orb1 orb2
+cp orb1 orb3
+
+A potom znova spusti tento skript pohára na potvrdenie.
+
+EOF
+    fi
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Hmm, toto nefungovalo.
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./pohár

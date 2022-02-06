@@ -1,0 +1,22 @@
+
+# Môžeš prevádzať interakciu s položkami v miestnosti (končia znakom *)
+# ich spustením ako príkaz (skript shellu).
+#
+# Napríklad, zbierať poklad:
+#
+# ./poklad
+#
+# . (bodka) znamená *nehýbať sa* a názov
+# skriptu spúšťa kód. Toto je známe ako
+# relatívna cesta a . znamená aktuálnu miestnosť
+# (adresár).
+#
+# Možno si nechal
+ poklad v predchádzajúcej miestnosti.
+# Prejdi späť do predchádzajúceho adresára s dvoma bodkami,
+# čo znamená *urob krok späť*.
+#
+# PRÍKLAD:
+#
+#cd..
+

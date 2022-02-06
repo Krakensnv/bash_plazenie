@@ -1,0 +1,15 @@
+
+# Zdá sa, že si sa dostal na koniec tejto haly.
+#
+# Vráť sa a skús inú cestu.
+#
+# Pamätaj, že ak chceš spätne sledovať jeden adresár, zadaj:
+#
+#cd..
+#
+# Ak si kreslíš mapu svojho pokroku,
+# vždy môžeš získať názov svojho pracovného 
+# adresára s týmto príkazom:
+#
+# pwd
+

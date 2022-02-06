@@ -1,0 +1,463 @@
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+roll() {
+    echo "Zadaj číslo: "
+    read NUM
+    ALPHA=$RANDOM
+    OMEGA=$RANDOM
+    A=`echo $ALPHA | cut -b 1-2`
+    O=`echo $OMEGA | cut -b 1-2`
+    let "NUM=$ALPHA % $OMEGA"
+    MONSTER=$RANDOM
+    MONSTER=`echo $MONSTER | cut -b 1-2`
+    NUM=`echo $NUM | cut -b 1-2`
+
+    let "MONSTER=MONSTER+3"
+    
+    if [ ! -e bubon ]; then
+       let "MONSTER=MONSTER-2"
+    fi
+    
+    echo "Netvor sa zvalil " $MONSTER
+    echo "Ty si sa zvalil " $NUM
+
+    if [[ -e wizard-dark && -e čarodejnícke-svetlo ]]; then
+	let "NUM=NUM+2"
+	echo "+2 Kraken.snv"
+    fi
+
+    if [[ -e ../../.požehnanie ]]; then
+	let "NUM=NUM+2"
+	echo "+2 POSIX čarodejnícky bonus!"
+    fi
+    resolve
+}
+
+gameover () {
+    cat << EOF > corpse
+Na podlahe vidíš mŕtvolu zabitého dobrodruha
+zo žalára. Na mŕtvole nájdeš nasledujúce predmety:
+
+${I}
+
+EOF
+    curr=`basename $PWD`
+    while [ "$curr" != "vchod" ]; do
+        pushd .. &> /dev/null
+        dirs -c
+        curr=`basename $PWD`
+    done
+    unset I
+    unset HP
+    $SHELL
+}
+
+flee () {
+    cat << EOF
+Otočíš sa na útek, no zistíš, že nemôžeš. Stráviš 1000
+rokov ako bezduchý sluha plaziaceho sa chaosu. Keď sa
+prebuďíš, môžeš sa pokúsiť bojovať za svoje oslobodenie.
+
+EOF
+}
+
+resolve() {
+    if [[ $MONSTER -eq $NUM ]]; then
+        cat << EOF
+Vyhneš sa útoku, no v dôsledku toho míňaš svoj cieľ.
+Roztoč to znova...
+
+EOF
+	roll
+    fi
+    
+    if [[ $MONSTER -lt $NUM ]]; then
+        cat << EOF
+Úder! Citeľný hit! Porazil si staršieho boha
+chaosu!
+
+EOF
+       cat << EOF > poklad
+#!/bin/bash
+if ! grep  --quiet --only-matching vlasy <<< \$I; then
+    cat << eof
+Našli ste prameň **vlasov** boha! Pridajte ho do svojho inventára ako `vlasy`.
+
+eof
+else 
+    echo "Tento poklad už bol odobratý."
+fi
+
+EOF
+       chmod +x poklad
+       cat << EOF > platina
+#!/bin/bash
+if ! grep  --quiet --only-matching náramok <<< \$I; then
+    cat << eof
+Našiel si začarovaný *náramok* chaotickej
+nekromancie! Pridaj ho do svojho inventára.
+eof
+else
+    echo "Tento poklad už bol odobratý."
+fi
+
+EOF
+        chmod +x platina
+        cat << EOF > end 
+Dosiahol si koniec hry. Teraz už Bash poznáš dostatočne
+ pre použiťie na každodenné aktivity. Prax robí
+Majstra, takže ho používaj často. Pre pokračovanie Bash
+tipov, často navštevuj opensource.com.
+
+A nakoniec dúfam, že prispeješ svojimi vlastnými
+miestnosťami žalára do Bash_plazenia!
+
+EOF
+
+    else
+        cat << EOF
+Tvoj meč sa neškodne hojdá vzduchom. Berieš 10
+bodové poškodenie od tvojho nepriateľa. Odpočítaj to od svojho HP.
+
+let "HP=HP-10"
+
+EOF
+        let HP=HP-10
+        export HP
+        if [ "$HP" -le 0 ]; then
+            cat << EOF
+Starší boh chaosu pohltí tvoje telo a dušu. Bol
+si zabitý.
+
+KONIEC HRY!
+
+EOF
+            gameover
+            exit 1
+        fi
+	    roll
+    fi
+}
+
+cat << EOF
+V mihnutí oka pred tebou stojí Nyarlathotep.
+Z jeho rúk vychádzajú čierne nekrotické lúče a tvoja myseľ
+kričí.
+
+EOF
+printf "Si ozbrojený? a/n  "
+read RESP
+
+if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+
+    if grep  --quiet --only-matching "sword" <<< $I; then
+        roll
+    else
+        cat << EOF
+Ale nie! Stratil si čepeľ! Nyarlathotep, starší
+boh chaosu, cíti tvoju slabosť.
+
+EOF
+        flee
+    fi
+else
+    flee
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Hmm, toto nefungovalo.
+#
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./nyarlathotep
+#
+# Ak nevidíš * za
+# týmto názvom súboru pravdepodobne si
+# zabudol použiť ls -F
+

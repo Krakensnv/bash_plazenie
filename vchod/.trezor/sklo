@@ -1,0 +1,324 @@
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+printf "Máš ľadový kryštál? a/n "
+read RESP
+
+no_crystal () {
+    cat << EOF
+Cítiš, že sklenené črepy niečo hľadajú.
+Nech je to čokoľvek, teraz to nemôžeš poskytnúť.
+
+Choď opatrne!
+
+EOF
+}
+if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+    if grep  --quiet --only-matching crystal <<< $I; then
+        cat << EOF
+Ľadový kryštál si umiestnil medzi úlomky skla.
+Meč v tvojich rukách chladne. Cítiš silu
+cez ktorú prechádza 1000 blizzardov.
+
+EOF
+        touch .požehnanie
+    else
+        no_crystal
+    fi
+else
+    no_crystal
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Hmm, toto nefungovalo.
+
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./sklo
+
+

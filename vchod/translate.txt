@@ -1,0 +1,166 @@
+vchod
+----------------------------
+.vault-.trezor
+.chapel-.kaplnka
+.rift-.trhlina
+cellar-pivnica
+scroll-zvitok
+.scrap-.šrot  / odpad if utf-8 issue
+portal-portál
+
+
+pivnica
+-----------------------------
+armoury-zbrojnica
+treasure-poklad
+scroll-zvitok
+
+--- header ---
+----------------------------
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+
+
+# Hmm, toto nefungovalo.
+#
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./čarodejnícke-svetlo
+#
+# Ak nevidíš * za
+# týmto názvom súboru pravdepodobne si
+# zabudol použiť ls -F
+
+
+zbrojnica
+---------------------------
+potion-elixír
+scroll-zvitok
+treasure-poklad
+chamber-komora
+
+
+komora
+--------------------------
+scroll-zvitok
+statue-socha
+treasure-poklad
+spell-kúzlo
+chapel-kaplnka
+courtyard-dvor
+aviary-voliéra
+hall-hala
+pieces-kúsky
+
+
+vchod/.vault TR
+------------------------
+glass-sklo
+scroll-zvitok
+stronghold-pevnost
+bless-požehnanie
+
+
+vchod/.vault/pevnosť
+------------------------
+nursery-škôlka
+goblet-pohár
+scroll-zvitok
+
+
+vchod/.vault/pevnosť/škôlka
+------------------------
+nursery-škôlka
+goblet-pohár
+scroll-zvitok
+lab-laboratórium
+
+vchod/.rift TR
+------------------------
+spire-veža
+arena-arena
+box-krabica
+
+vchod/.rift/aréna
+------------------------
+scroll-zvitok
+pit-jama
+
+
+vchod/.rift/aréna/jama
+------------------------
+drum-bubon
+drummer-bubeník
+scroll-zvitok
+wizard-light - čarodejnícke-svetlo
+nyarlathotep-nyarlathotep
+
+
+vchod/.rift/veža
+------------------------
+mezzanine-medziposchodie
+scroll-zvitok
+
+
+vchod/.rift/veža/medziposchodie
+--------------------------------
+button-tlačidlo
+window-okno
+.elevator-.výťah  TR
+direction-smer
+door-dvere
+
+vchod/.rift/veža/medziposchodie/.elevator
+-----------------------------------------
+.satelite-.satelit  TR
+.direction-.smer    TR
+display-displej
+
+
+vchod/.rift/veža/medziposchodie/.elevator/.satelit
+--------------------------------------------------
+button-tlačidlo
+
+
+vchod/.chapel/
+--------------
+scroll-zvitok
+altar-oltár
+.chapel-.kaplnka
+courtyard-nádvorie
+.course-.kliadba
+.bless-.požehnanie
+
+
+vchod/.chapel/nádvorie
+-----------------------
+aviary-voliéra
+fountain-fontána
+rags-handry
+scroll-zvitok
+
+
+vchod/.chapel/nádvorie
+----------------------------
+
+
+
+
+
+
+
+

@@ -1,0 +1,344 @@
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+cat << EOF
+Na zemi stojí kovová krabica. Zdá sa, že je
+osvetlená zvnútra. V krabici je okno. To
+okno je čierne, ale je tam luminiscenčný nápis.
+
+EOF
+printf "Chceš si prečítať ten nápis? a/n "
+read RESP
+
+if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+    cat << EOF
+
+.--------------------------------,
+|         Vitaj v POSIXe         |
+| Zadaj svoje užívateľské meno:  |
+'--------------------------------'
+EOF
+   read RESP
+
+   if [ "$RESP" = "$USER" ]; then
+       cat << EOF > brnenie
+#!/bin/bash
+cat << eof
+Vitaj, ${USER}, vo svojom systéme POSIX. Veľa si sa naučil,
+a teraz máš základné znalosti, ktoré potrebuješ, aby si sa stal
+skutočne mocný čarodejník.
+
+Našiel si magické brnenie. Pridaj si ho do svojho inventára.
+
+eof
+touch .brnenie
+touch .požehnanie
+
+EOF
+        chmod +x brnenie
+        echo "Vo vzduchu cítiš mágiu."
+   fi
+else
+    cat << EOF
+Krabica je plná tajomstiev a často je najlepšie, nepozerať sa
+do hádaniek príliš hlboko.
+
+EOF
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Hmm, toto nefungovalo.
+#
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./box
+#
+# Ak nevidíš * za týmto 
+# názvom súboru pravdepodobne si
+# zabudol použiť ls -F
+

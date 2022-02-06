@@ -1,0 +1,22 @@
+
+# Ilúzie sú tu silné.
+# Je ťažké rozlíšiť, čo sú dvere a čo objekt.
+#
+# Čarovné kúzlo, ktoré používaš na rozhľad, možno rozšíriť.
+#
+# Odteraz čaruj takto:
+#
+# ls -F
+#
+# Adresáre (miestnosti týchto katakomb) končia symbolom /.
+#
+# Súbory (programy, zvitky, atď.) končia symbolom *.
+#
+# Môžeš sa vyhnúť tomu, aby si musel zakaždým zadávať `ls -F` spustením
+# nasledovného kúzla:
+#
+# alias ls='ls -F'
+#
+# Toto je známe ako `shell` alebo `alias` príkazu. S týmto aliasom
+# jednoduchým zadaním ls sa spustí ls -F. Vyskúšaj to!
+#

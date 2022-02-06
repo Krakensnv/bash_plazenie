@@ -1,0 +1,431 @@
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+gameover () {
+    cat << EOF > corpse
+Na podlahe vidíš mŕtvolu zabitého dobrodruha zo
+žalára. Na mŕtvole nájdeš nasledujúce predmety:  
+
+$I
+
+EOF
+    curr=`basename $PWD`
+    while [ "$curr" != "vchod" ]; do
+        pushd .. &> /dev/null
+        dirs -c
+        curr=`basename $PWD`
+    done
+    unset I
+    unset HP
+    $SHELL
+}
+
+# toto prebieha po "zničení" sochy
+# a tento súbor bol premenovaný na 'kúsky'
+if [ "$0" = "./kúsky" ]; then
+    cat << EOF
+Preosievaš kúsky rozbitej sochy.
+
+V pozostatkoch sochy nenájdeš nič zaujímavé.
+
+EOF
+    exit 1
+fi
+
+# začni stretnutie so sochou
+cat << EOF
+V rohu miestnosti stojí drsná socha.
+
+EOF
+printf "Pristupuješ k nej? a/n "
+
+read RESP
+
+if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+    cat << EOF
+Socha ožíva a duní:
+
+KTO SA ODVÁŽIL VNIKNÚŤ DO KOMORY DUCHOV?
+
+Socha ťa zasiahne päsťou o sile 5 zranení.
+
+EOF
+
+# toto nemení HP používateľa,
+# vypočítava to až po poškodení
+    let "HP=HP-5"
+    if [ "$HP" -le 0 ]; then
+        cat << EOF
+Boli ste zabití sochou.
+
+KONIEC HRY!
+
+EOF
+        gameover
+        exit 1
+    fi
+
+    perl -pe 's/mince/diamanty/' -i ./poklad
+    printf "Máš meč? a/n "
+    read RESP
+    if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+       if grep  --quiet --only-matching 'sword' <<< $I; then
+           cat <<EOF
+Udrieš do sochy a tá sa rozbije na kusy!
+
+Utrpel si však škodu.
+Odpočítaj si 5 bodov z tvojej premennej HP:
+
+let "HP=HP-5"
+
+EOF
+           mv socha kúsky
+       else
+           cat << EOF
+Nie, nie! Utekaj!
+Utrpel si poškodenie od animovanej sochy.
+Odpočítaj si 5 bodov z tvojej premennej HP:
+
+let "HP=HP-5"
+
+EOF
+           rm poklad
+           rm kúzlo
+      fi
+    else
+        cat <<EOF
+Utekaj!
+Utrpel si poškodenie od animovanej sochy.
+Odpočítaj si 5 bodov z tvojej premennej HP:
+
+let "HP=HP-5"
+
+EOF
+   fi
+else
+    cat << EOF
+Opatrne sa vyhýbaš soche, pripomínajúc si príbehy zo života
+číhajúci kameň hlboko v strašidelných katakombách.
+
+EOF
+
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Hmm, toto nefungovalo.
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./socha
+

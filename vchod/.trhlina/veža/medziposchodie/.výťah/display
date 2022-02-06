@@ -1,0 +1,507 @@
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+
+floors=666
+countdown () {
+	var=${floors}
+	len=${#var} 
+	echo -n $var
+    let m=var-1
+	for t in `seq ${m} -1 1`
+	do
+		sleep 0.1
+		for i in `seq ${len} -1 1`
+		do
+			echo -ne '\b'
+		done
+		if [ $len -gt ${#t} ]
+		then
+            let l=len-1
+			for n in `seq ${l} -1 ${#t}`
+			do
+				echo -n '0'
+			done
+		fi
+		echo -n $t
+	done
+}
+
+
+countup () {
+	var=${floors}
+	for t in `seq 1 ${var}`
+	do
+		sleep 0.1
+        len=${#t}
+		for i in `seq 1 ${#var}`
+		do
+			echo -ne '\b'
+		done
+        if [ ${len} -lt ${#var} ]; then
+            let n=${#var}-len
+            for j in `seq 1 ${n}`
+            do
+                echo -ne '0'
+            done
+        fi
+        echo -n $t
+	done
+}
+
+if grep --quiet HORE .smer; then
+    cat << EOF
+Počuješ jemné bzučanie a cítiš ľahkosť vo svojich
+chodidlách s nejasným, znepokojujúcim pocitom pohybu.
+
+Magický displej zobrazuje:
+
+EOF
+    countup
+    cat << EOF
+
+Dvere sa otvárajú ale za nimi nie je nič iba tma.
+
+EOF
+    echo "DOLE" > .smer
+    ln -sf .satelit dvere && \
+        sleep 10 && \
+        echo "Dvere sa zatvorili." && \
+        rm dvere &> /dev/null && \
+    echo "DOLE" > .smer &
+    echo
+else
+    cat << EOF
+Počuješ jemné bzučanie a cítiš ľahkosť vo svojich
+chodidlách s nejasným, znepokojujúcim pocitom pohybu.
+
+Magický displej zobrazuje:
+
+EOF
+    countdown
+    echo
+    echo
+    echo "HORE" > .smer &
+    cat << EOF
+Dvere sa otvárajú ale za nimi nie je nič iba tma.
+
+EOF
+    sleep 10 && \
+        ln -sf .. dvere && \
+        echo "Dvere sa zatvorili." && \
+        rm dvere &> /dev/null &
+    echo
+fi
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./displej
+#
+# Ak nevidíš * za
+# týmto názvom súboru pravdepodobne si
+# zabudol použiť ls -F
+

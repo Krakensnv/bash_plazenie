@@ -1,0 +1,17 @@
+
+V týchto katakombách je čierna tma.
+Máš magické kúzlo, ktoré zobrazí zoznam všetkých predmetov v miestnosti.
+
+Ak chceš vidieť v tme, napíš: ls
+Ak sa chceš pohybovať, zadaj: cd <adresár>
+
+Skús sa poobzerať po tejto miestnosti.
+Potom sa presuň do jednej z ďalších miestností.
+
+PRÍKLAD:
+
+$ ls 
+$ cd pivnica
+
+Nezabudni napísať `ls`, keď sa dostaneš do ďalšej miestnosti!
+

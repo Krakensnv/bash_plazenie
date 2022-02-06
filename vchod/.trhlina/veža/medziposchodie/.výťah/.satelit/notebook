@@ -1,0 +1,37 @@
+Toto je zápisník M0rph3usa, hackera Kráľovstva
+Nor: Študoval som stroje, ktoré odpočívajú v tomto
+satelite. Mám spôsob, ako spojiť časti, aby vytvorili 
+golema, *robot*, použitím rovnakého zaklínadla, aké používam k 
+zobrazeniu značiek a zvitkov v mojom domovskom svete. Objavil som,
+že na to, aby som oživil robota, musím vysloviť
+nasledujúce kúzlo:
+
+    chmod +x robot
+
+Štyri časti golema som označil alfa, beta, gama a delta,
+ale toto nie je to spravne poradie. Musím ich prekombinovať. Musím
+presunúť spojené časti do iného kúzla, ktoré 
+zdokumentujem nižšie. Prvé zaklínadlo, ktoré som skúsil, bolo takto:
+
+    cat alpha beta gamma delta | base64 -d > robot
+
+...ale vyskytla sa nasledujúca chyba:
+
+    base64:  invalid input
+
+Všimol som si, že nie v každom poradí vyjde táto
+rovnaká chyba, ale výsledný *robot* stále nefunguje. 
+Objavil som ďalšie zaklínadlo, ktoré mi povie, že
+*robot* je zostavený správne:
+
+    sha256sum -c sha256sums 
+
+Vyskúšam každú kombináciu a zdokumentujem tú
+kde sa to podarí.
+
+    alpha beta delta gamma 
+    alpha delta bet
+
+Zdá sa, že na notebooku je zaschnutá krv a
+ostatné strany sú prázdne.
+

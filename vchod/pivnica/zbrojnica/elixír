@@ -1,0 +1,338 @@
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+cat << EOF 
+Našiel si elixírovú fľašu v ktorej víri
+zelená tekutina. Chceš ju vypiť? a/n
+
+EOF
+read RESP
+
+if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+   cat << EOF 
+Chuť rustikálnej zelenej rastliny naplní tvoje ústa. To
+ťa zahreje a posilní.
+
+Vytvor premennú pre svoje body zdravia (HP). Máš
+15 HP:
+
+export HP=15
+
+EOF
+else
+    cat << EOF
+Nenarodil si sa včera. Tento elixír je pravdepodobne
+jed.
+
+Vytvor premennú pre svoje body zdravia (HP). Máš
+10 HP:
+
+export HP=10
+
+EOF
+
+fi
+
+cat << EOF
+Svoj zdravotný stav si môžeš kedykoľvek skontrolovať:
+
+echo \$HP
+
+EOF
+mv ../../.kaplnka ../../kaplnka 2>/dev/null
+mv ../../.trezor ../../trezor 2>/dev/null
+mv ../../.šrot ../../šrot 2>/dev/null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Hmm, to nefungovalo.
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./elixír
+

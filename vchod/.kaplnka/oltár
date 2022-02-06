@@ -1,0 +1,334 @@
+#!/bin/bash
+#
+# Ak toto čítaš, zatúlal si sa za hranice
+# a čítaš kód, ktorý riadi hru.
+#
+# Gratulujem!
+#
+# Učenie sa Linuxu je o zvedavosti, takže si prečítaj tento kód a uvidíš
+# či vieš prísť na to, čo to robí.
+#
+# Keď si pripravený pokračovať v hre, drž sa
+# zvitkov. Ak si uviazol, prejdi na Gitlab a vytvor problém (`Issue`).
+# Rád ti poskytnem nápovedu.
+#
+cat << EOF
+V rohu je chátrajúci starý oltár nejakého zabudnutého boha.
+
+Na zemi je malá drobnosť. Vyzerá to nábožensky
+od prírody.
+
+EOF
+printf "Chceš dať tú drobnosť späť na oltár? a/n "
+read RESP
+
+if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+    cat << EOF
+Položíš drobnosť na oltár. Cítiš jemný
+vánok prechádzajúci miestnosťou.
+
+EOF
+    touch .požehnanie
+else
+    printf "Chceš si vziať drobnosť pre seba? a/n "
+    read RESP
+    if [ "$RESP" = "a" -o "$RESP" = "A" ]; then
+        echo "Nezabudni pridať drobnosť do svojho inventára!"
+        touch .kliatba
+    else
+        cat << EOF
+Drobnosť necháš tam, kde leží. Je tu veľký smútok. 
+Cítiš nutkanie ísť ďalej.
+
+EOF
+
+        touch .kliatba
+   fi
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Hmm, toto nefungovalo.
+#
+# Pamätaj, že keď súbory končia na *
+# to znamená, že sú to aplikácie.
+# Skús toto:
+#
+# ./oltár
+#
+# Ak nevidíš * za
+# týmto názvom súboru pravdepodobne si
+# zabudol použiť ls -F
+
+
